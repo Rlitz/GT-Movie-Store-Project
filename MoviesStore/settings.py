@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'home.apps.HomeConfig',
-    'moveies.app.MoviesConfig',
+    'movies.apps.MoviesConfig',
     'cart.apps.CartConfig'
 ]
 
