@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home.apps.HomeConfig',
     'movies.apps.MoviesConfig',
-    'cart.apps.CartConfig'
+    'cart.apps.CartConfig',
     'accounts',
 ]
 
@@ -59,8 +59,7 @@ ROOT_URLCONF = 'MoviesStore.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')]
-        ,
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
