@@ -1,3 +1,15 @@
-.bg-index {
-    background: url('../img/background.jpg') no-repeat fixed;
+body {
+    background: url("../img/background.jpg") no-repeat center center fixed;
+    background-size: cover;
 }
+
+/* Navbar link color */
+.navbar a.nav-link {
+    color: #FFFEF6 !important;
+}
+
+/* Dark navbar background */
+.bg-dark {
+    background-color: #2E2E2E !important;
+}
+
