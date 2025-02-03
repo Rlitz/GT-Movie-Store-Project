@@ -1,6 +1,7 @@
 from django.shortcuts import render
 
 def index(request):
-    return render(request, 'home/index.html')
+    template_data = {'title': 'Movies Store'}
+    return render(request, 'home/index.html', template_data)
 def about(request):
     return render(request, 'home/about.html')

@@ -1,4 +1,4 @@
 .bg-index {
     background: url('../img/background.jpg') no-repeat fixed;
-    background-size: cover;
+    background-size: 100% auto;
 }
