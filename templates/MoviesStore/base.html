@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     {% load static %}
 <head>
-    <meta charset="UTF-8">
     <title> {% if title %}{{ title }}{% else %}Movies Store{% endif %} </title>
 
     <!-- Bootstrap CSS-->
@@ -20,7 +19,6 @@
 </head>
 <body>
     <!-- Header -->
-    <header>
     <nav class="p-3 navbar navbar-dark bg-dark navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand" href="{% url 'home' %}">
@@ -36,7 +34,7 @@
             </div>
         </div>
     </nav>
-    </header>
+    <!-- Header -->
 
     <main>
         {% block content %}
