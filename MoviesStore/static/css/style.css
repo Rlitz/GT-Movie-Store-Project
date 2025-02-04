@@ -1,6 +1,6 @@
 body {
     background: url("../img/background.jpg") no-repeat center center fixed;
-    background-size: 100% auto;
+    background-size: cover;
 }
 
 /* Navbar link color */
