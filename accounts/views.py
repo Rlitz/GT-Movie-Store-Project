@@ -1,6 +1,5 @@
 from idlelib.rpc import request_queue
 
-from django.contrib.auth import authenticate
 from django.shortcuts import render
 
 # Create your views here.
@@ -20,12 +19,11 @@ def login(request):
         return render(request, 'accounts/login.html', {'template_data': template_data})
     elif request.method == 'POST':
         user = authenticate(
-            username = request.POST['username'],
-            password = request.POST['password']
+            request, username = request.POST['username'], password = request.POST['password']
         )
         if user is None:
             template_data['error'] = 'The username or password you entered is invalid.'
-            return render(request, 'accounts/login.html', {template_data: template_data})
+            return render(request, 'accounts/login.html', {'template_data': template_data})
         else:
             auth_login(request, user)
             return redirect('home.index')
