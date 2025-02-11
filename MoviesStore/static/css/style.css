@@ -1,6 +1,6 @@
-body {
+.bg-index {
     background: url("../img/background.jpg") no-repeat center center fixed;
-    background-size: cover;
+    background-size: 100% auto;
 }
 
 /* Navbar link color */
@@ -34,5 +34,29 @@ body {
 }
 .ms-footer-bottom a:hover {
     color: #fff;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+.img-card-200 {
+width: fit-content;
+max-height: 200px;
+}
+
+.img-card-400 {
+width: fit-content;
+max-height: 400px;
 }
 
