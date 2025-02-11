@@ -1,6 +1,7 @@
 from idlelib.rpc import request_queue
 
 from django.shortcuts import render
+from django.contrib.auth.models import User
 
 # Create your views here.
 from django.contrib.auth import login as auth_login, authenticate, logout as auth_logout
@@ -81,3 +82,10 @@ def password_reset(request):
         form = PasswordResetForm()
 
     return render(request, "accounts/reset_password.html", {"form": form})
+
+@login_required
+def orders(request):
+    template_data = {}
+    template_data['title'] = 'Orders'
+    template_data['orders'] = request.user.order_set.all()
+    return render(request, 'accounts/orders.html', {'template_data': template_data})
