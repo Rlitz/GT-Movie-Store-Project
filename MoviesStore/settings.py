@@ -137,10 +137,11 @@ MEDIA_URL = '/media/'
 
 # SMTP Configuration
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-EMAIL_HOST = 'mail.gmx.com'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'carlfredericksenthewizard@gmx.com'
-EMAIL_HOST_PASSWORD = 'CS2340GROUP2'
-SITE_URL = 'http://127.0.0.1:8000'
+EMAIL_HOST_USER = 'REDACTED'
+EMAIL_HOST_PASSWORD = 'REDACTED'
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+SITE_URL = 'http://127.0.0.1:8000/'
